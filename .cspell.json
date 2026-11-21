@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "import": ["@cspell/dict-de-de/cspell-ext.json"],
+  "language": "en",
+  "words": ["bebehr", "katex"],
+  "ignorePaths": [".cspell.json", "package-lock.json"],
+  "allowCompoundWords": true,
+  "dictionaries": [],
+  "useGitignore": true
+}

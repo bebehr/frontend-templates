@@ -32,6 +32,7 @@ package-lock.json text eol=lf -diff
 # Exclude files from exporting
 #
 
+.cspell.json        export-ignore
 .editorconfig       export-ignore
 .gitattributes      export-ignore
 *.*ignore           export-ignore

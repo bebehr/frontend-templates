@@ -3,6 +3,7 @@
     "davidanson.vscode-markdownlint",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "mhutchie.git-graph"
+    "mhutchie.git-graph",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
