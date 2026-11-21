@@ -36,6 +36,7 @@ package-lock.json text eol=lf -diff
 .editorconfig       export-ignore
 .gitattributes      export-ignore
 *.*ignore           export-ignore
+.jscpd.json         export-ignore
 *.*rc               export-ignore
 .vscode/**          export-ignore
 eslint.config.mjs   export-ignore

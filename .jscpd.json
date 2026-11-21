@@ -1,0 +1,6 @@
+{
+  "threshold": 0,
+  "ignore": ["**/node_modules/**", "**/package-lock.json"],
+  "reporters": ["console-full"],
+  "no-tips": true
+}

@@ -8,7 +8,8 @@
   "author": "",
   "scripts": {
     "check": "npm run check:spell",
-    "check:spell": "cspell .",
+    "check:copypaste": "jscpd .",
+    "check:spell": "cspell . --quiet",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "format": "npm run prettier:write && npm run lint:fix",
@@ -20,7 +21,7 @@
     "lint:md:fix": "markdownlint-cli2 . --fix",
     "prettier": "prettier . --check",
     "prettier:write": "prettier . --write",
-    "test": "npm run lint && npm run check:spell && npm audit"
+    "test": "npm run lint && npm run check:copypaste && npm run check:spell && npm audit"
   },
   "overrides": {
     "markdownlint-cli2": {
@@ -36,6 +37,7 @@
     "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.14.0",
+    "jscpd": "^5.4.3",
     "markdownlint-cli2": "^0.24.2",
     "prettier": "^3.10.1",
     "prettier-plugin-packagejson": "^3.1.0"
