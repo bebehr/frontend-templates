@@ -38,5 +38,6 @@ package-lock.json text eol=lf -diff
 *.*ignore           export-ignore
 *.*rc               export-ignore
 .vscode/**          export-ignore
+eslint.config.mjs   export-ignore
 prettier.config.mjs export-ignore
 README.md           export-ignore
