@@ -9,10 +9,13 @@
   "scripts": {
     "check": "npm run check:spell",
     "check:copypaste": "jscpd .",
+    "check:deps": "npm audit && npm outdated",
+    "check:git": "git --version && git diff --check && bash -c 'missing=$(git ls-files | git check-attr -a --stdin | grep -E \": text: auto$\" || true); if [ -n \"$missing\" ]; then printf \".gitattributes rule missing:\\n%s\\n\" \"$missing\" >&2; exit 1; fi'",
+    "check:secret": "secretlint \"**/*\"",
     "check:spell": "cspell . --quiet",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
-    "format": "npm run prettier:write && npm run lint:fix",
+    "format": "npm run lint:fix && npm run prettier:write",
     "lint": "npm run lint:formatting && npm run lint:editorconfig && npm run eslint && npm run lint:html && npm run lint:md",
     "lint:editorconfig": "editorconfig-checker",
     "lint:fix": "npm run eslint:fix && npm run lint:md:fix",
@@ -22,7 +25,7 @@
     "lint:md:fix": "markdownlint-cli2 . --fix",
     "prettier": "prettier . --check",
     "prettier:write": "prettier . --write",
-    "test": "npm run lint && npm run check:copypaste && npm run check:spell && npm audit"
+    "test": "npm run check:git && npm run lint && npm run check:copypaste && npm run check:secret && npm run check:spell && npm run check:deps"
   },
   "overrides": {
     "@awmottaz/prettier-plugin-void-html": {
@@ -52,7 +55,8 @@
     "jscpd": "^5.4.3",
     "markdownlint-cli2": "^0.24.2",
     "prettier": "^3.10.1",
-    "prettier-plugin-packagejson": "^3.1.0"
+    "prettier-plugin-packagejson": "^3.1.0",
+    "secretlint": "^14.0.1"
   },
   "engines": {
     "node": ">=22"

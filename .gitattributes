@@ -27,7 +27,8 @@ package-lock.json text eol=lf -diff
 *.yml             text eol=lf
 
 # RC files (like .babelrc or .eslintrc)
-*.*rc text eol=lf
+*.*rc      text eol=lf
+*.*rc.json text eol=lf
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore text eol=lf
@@ -42,6 +43,8 @@ package-lock.json text eol=lf -diff
 *.*ignore           export-ignore
 .jscpd.json         export-ignore
 *.*rc               export-ignore
+*.*rc.json          export-ignore
+.secretlintrc.json  export-ignore
 .vscode/**          export-ignore
 eslint.config.mjs   export-ignore
 prettier.config.mjs export-ignore
