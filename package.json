@@ -7,11 +7,16 @@
   "license": "MIT",
   "author": "",
   "scripts": {
+    "format": "npm run prettier:write",
+    "lint": "npm run lint:formatting && npm run lint:editorconfig",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:formatting": "npm run prettier",
     "prettier": "prettier . --check",
     "prettier:write": "prettier . --write",
-    "test": "npm run prettier"
+    "test": "npm run lint"
   },
   "devDependencies": {
+    "editorconfig-checker": "^6.2.0",
     "prettier": "^3.10.1",
     "prettier-plugin-packagejson": "^3.1.0"
   },
