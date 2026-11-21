@@ -8,6 +8,9 @@
 #
 
 # Source code
+*.js   text eol=lf
+*.mjs  text eol=lf
+*.cjs  text eol=lf
 *.json text eol=lf
 
 # Documentation
@@ -15,8 +18,12 @@
 LICENSE text eol=lf
 
 # Configs
-.editorconfig  text eol=lf
-.gitattributes text eol=lf
+.editorconfig     text eol=lf
+.gitattributes    text eol=lf
+package-lock.json text eol=lf -diff
+
+# RC files (like .babelrc or .eslintrc)
+*.*rc text eol=lf
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore text eol=lf
@@ -25,9 +32,10 @@ LICENSE text eol=lf
 # Exclude files from exporting
 #
 
-.vscode/**     export-ignore
-
-.editorconfig  export-ignore
-.gitattributes export-ignore
-.gitignore     export-ignore
-README.md      export-ignore
+.editorconfig       export-ignore
+.gitattributes      export-ignore
+*.*ignore           export-ignore
+*.*rc               export-ignore
+.vscode/**          export-ignore
+prettier.config.mjs export-ignore
+README.md           export-ignore

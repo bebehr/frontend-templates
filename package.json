@@ -1,0 +1,21 @@
+{
+  "name": "frontend-templates",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A modular frontend blueprint to kickstart modern web projects. Includes shared base configs and stack-specific branches.",
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "prettier": "prettier . --check",
+    "prettier:write": "prettier . --write",
+    "test": "npm run prettier"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "prettier-plugin-packagejson": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

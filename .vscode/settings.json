@@ -1,4 +1,28 @@
 {
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.prettier": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.prettier": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.prettier": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.prettier": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "files.insertFinalNewline": true,
