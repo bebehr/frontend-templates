@@ -6,13 +6,16 @@
   "keywords": [],
   "license": "MIT",
   "author": "",
+  "type": "module",
   "scripts": {
+    "build": "vite build",
     "check": "npm run check:spell",
     "check:copypaste": "jscpd .",
     "check:deps": "npm audit && npm outdated",
     "check:git": "git --version && git diff --check && bash -c 'missing=$(git ls-files | git check-attr -a --stdin | grep -E \": text: auto$\" || true); if [ -n \"$missing\" ]; then printf \".gitattributes rule missing:\\n%s\\n\" \"$missing\" >&2; exit 1; fi'",
     "check:secret": "secretlint \"**/*\"",
     "check:spell": "cspell . --quiet",
+    "dev": "vite",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "format": "npm run lint:fix && npm run prettier:write",
@@ -20,13 +23,14 @@
     "lint:editorconfig": "editorconfig-checker",
     "lint:fix": "npm run eslint:fix && npm run lint:style:fix && npm run lint:md:fix",
     "lint:formatting": "npm run prettier",
-    "lint:html": "htmlhint .",
+    "lint:html": "htmlhint . --ignore=\"**/dist/**\"",
     "lint:md": "markdownlint-cli2 .",
     "lint:md:fix": "markdownlint-cli2 . --fix",
     "lint:style": "stylelint \"**/*.{css,scss,sass}\" --allow-empty-input",
     "lint:style:fix": "stylelint \"**/*.{css,scss,sass}\" --fix --allow-empty-input",
     "prettier": "prettier . --check",
     "prettier:write": "prettier . --write",
+    "preview": "vite preview",
     "test": "npm run check:git && npm run lint && npm run check:copypaste && npm run check:secret && npm run check:spell && npm run check:deps"
   },
   "overrides": {
@@ -61,7 +65,8 @@
     "secretlint": "^14.0.1",
     "stylelint": "^18.1.0",
     "stylelint-config-recess-order": "^7.10.1",
-    "stylelint-config-standard": "^41.1.0"
+    "stylelint-config-standard": "^41.1.0",
+    "vite": "^8.3.8"
   },
   "engines": {
     "node": ">=22"

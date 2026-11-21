@@ -6,7 +6,12 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
-  globalIgnores(['!**/.*', '**/node_modules/.*', 'package-lock.json']),
+  globalIgnores([
+    '!**/.*',
+    '**/dist/**',
+    '**/node_modules/**',
+    'package-lock.json',
+  ]),
   {
     files: ['**/*.{html,htm}'],
     plugins: {

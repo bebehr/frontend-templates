@@ -6,6 +6,6 @@
   "words": ["awmottaz", "bebehr", "katex"],
   "ignorePaths": [".cspell.json", "package-lock.json"],
   "allowCompoundWords": true,
-  "dictionaries": [],
+  "dictionaries": ["html", "npm"],
   "useGitignore": true
 }

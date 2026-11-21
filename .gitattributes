@@ -27,12 +27,19 @@ package-lock.json text eol=lf -diff
 *.yaml            text eol=lf
 *.yml             text eol=lf
 
+# Graphics
+*.png binary
+*.svg text eol=lf -diff
+
 # RC files (like .babelrc or .eslintrc)
 *.*rc      text eol=lf
 *.*rc.json text eol=lf
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore text eol=lf
+
+# Prevents massive diffs from built files
+dist/** binary
 
 #
 # Exclude files from exporting
