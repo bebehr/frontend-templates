@@ -8,6 +8,7 @@
 #
 
 # Source code
+*.css  text eol=lf diff=css
 *.htm  text eol=lf diff=html
 *.html text eol=lf diff=html
 *.js   text eol=lf
@@ -38,6 +39,7 @@ package-lock.json text eol=lf -diff
 #
 
 .cspell.json        export-ignore
+*.config.mjs        export-ignore
 .editorconfig       export-ignore
 .gitattributes      export-ignore
 *.*ignore           export-ignore
@@ -46,6 +48,4 @@ package-lock.json text eol=lf -diff
 *.*rc.json          export-ignore
 .secretlintrc.json  export-ignore
 .vscode/**          export-ignore
-eslint.config.mjs   export-ignore
-prettier.config.mjs export-ignore
 README.md           export-ignore
