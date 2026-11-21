@@ -4,7 +4,10 @@
  */
 const config = {
   singleQuote: true,
-  plugins: ['prettier-plugin-packagejson'],
+  plugins: [
+    '@awmottaz/prettier-plugin-void-html',
+    'prettier-plugin-packagejson',
+  ],
 
   // Overrides for specific file types
   overrides: [

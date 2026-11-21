@@ -8,6 +8,8 @@
 #
 
 # Source code
+*.htm  text eol=lf diff=html
+*.html text eol=lf diff=html
 *.js   text eol=lf
 *.mjs  text eol=lf
 *.cjs  text eol=lf
@@ -21,6 +23,8 @@ LICENSE text eol=lf
 .editorconfig     text eol=lf
 .gitattributes    text eol=lf
 package-lock.json text eol=lf -diff
+*.yaml            text eol=lf
+*.yml             text eol=lf
 
 # RC files (like .babelrc or .eslintrc)
 *.*rc text eol=lf

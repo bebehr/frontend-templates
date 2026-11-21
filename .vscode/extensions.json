@@ -4,6 +4,7 @@
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
+    "htmlhint.vscode-htmlhint",
     "mhutchie.git-graph",
     "streetsidesoftware.code-spell-checker"
   ]
