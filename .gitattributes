@@ -19,6 +19,7 @@
 # Documentation
 *.md    text eol=lf diff=markdown
 LICENSE text eol=lf
+*.txt   text eol=lf
 
 # Configs
 .editorconfig     text eol=lf
